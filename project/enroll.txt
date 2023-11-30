@@ -1,0 +1,64 @@
+// Courses array
+let courses = [
+  { id: 1, name: "HTML & CSS" },
+  { id: 2, name: "JAVASCRIPT" },
+  { id: 3, name: "WEB DESIGN BASICS" },
+  { id: 4, name: "RESPONSIVE WEB DESIGN " },
+  { id: 5, name: "ACCESSIBLE WEB DEVELOPMENT" },
+
+];
+
+// Enrolled courses array
+let myCourses = [];
+
+// Display available courses
+function showCourses() {
+
+  let html = "";
+
+  courses.forEach(course => {
+    html += `
+      <div class="course">
+        <input type="checkbox" course-id=${course.id}>
+        ${course.name}
+      </div>
+    `;
+  });
+
+  document.getElementById("courses").innerHTML = html;
+
+}
+
+// Handle enroll button click
+document.getElementById("enroll-btn").onclick = () => {
+
+  // Get selected courses
+  let selectedCourses = document.querySelectorAll('.course input:checked');
+
+  // Loop through selected courses and enroll
+  selectedCourses.forEach(course => {
+    let courseId = course.getAttribute("course-id");
+    myCourses.push(courses.find(c => c.id == courseId));
+  });
+
+  // Display enrolled courses
+  showMyCourses();
+
+};
+
+// Show enrolled courses
+function showMyCourses() {
+
+  let html = "";
+
+  myCourses.forEach(course => {
+    html += `
+      <div>${course.name} <h3> enrolled</h3S></div>
+    `;
+  });
+
+  document.getElementById("my-courses").innerHTML = html;
+
+}
+
+showCourses();

@@ -1,0 +1,53 @@
+head {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  color: #333;
+  background-color: orange;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: azure;
+
+}
+
+h2,
+h3 {
+  color: #0066CC;
+
+}
+
+h1 {
+  color: #0066CC;
+  text-align: center;
+}
+
+.button {
+  background-color: #0066CC;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav {
+  border: 6px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  word-spacing: 5px;
+}
+
+a:hover {
+  background-color: cornflowerblue;
+  box-sizing: content-box;
+}
+
+a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
